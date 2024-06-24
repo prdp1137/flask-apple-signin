@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='flask_apple_login',
+    name='flask_login_apple',
     version='0.1.0',
     description='A Flask extension to support Sign in with Apple',
     author='Pradip Bhattarai',
