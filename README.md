@@ -18,7 +18,7 @@ A Flask extension for integrating Apple OAuth login seamlessly into your Flask a
 Install Flask Apple Login using pip:
 
 ```bash
-pip install flask-apple-login
+pip install flask-login-apple
 ```
 
 ## Usage
