@@ -29,6 +29,7 @@ class AppleLogin:
     def authorize(self):
         with current_app.app_context():
             redirect_uri = url_for('apple_login_callback', _external=True)
+            # Apple requires HTTPS for the redirect URI with TLS 1.2, hence the following line
             redirect_uri = redirect_uri.replace('http://', 'https://')
             url = (
                 'https://appleid.apple.com/auth/authorize?'
@@ -54,6 +55,7 @@ class AppleLogin:
     def get_token(self, code):
         with current_app.app_context():
             redirect_uri = url_for('apple_login_callback', _external=True)
+            # Apple requires HTTPS for the redirect URI with TLS 1.2, hence the following line
             redirect_uri = redirect_uri.replace('http://', 'https://')
             url = 'https://appleid.apple.com/auth/token'
             headers = {
